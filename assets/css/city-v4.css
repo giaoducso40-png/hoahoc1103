@@ -171,20 +171,20 @@
   position:absolute!important;
   z-index:4;
   left:50%;
-  top:auto;
-  bottom:calc(100% + 14px);
+  top:calc(100% - 8px);
+  bottom:auto;
   transform:translateX(-50%);
   display:grid!important;
   align-content:center;
   gap:1px!important;
-  min-width:0;
-  max-width:none!important;
+  min-width:max-content;
+  max-width:180px!important;
   margin:0!important;
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
+  padding:5px 10px!important;
+  border:1px solid rgba(255,255,255,.95)!important;
+  border-radius:12px!important;
+  background:rgba(255,255,255,.9)!important;
+  box-shadow:0 6px 16px rgba(20,63,52,.13)!important;
   white-space:normal!important;
 }
 .city-v4 .node-label b{
@@ -192,7 +192,7 @@
   max-width:none!important;
   overflow:visible!important;
   color:#143c32!important;
-  font-size:clamp(1rem,1.12vw,1.16rem)!important;
+  font-size:clamp(.76rem,.86vw,.9rem)!important;
   line-height:1.08!important;
   text-shadow:0 1px 0 rgba(255,255,255,.95),0 0 5px rgba(255,255,255,.95),0 2px 8px rgba(255,255,255,.9);
   text-overflow:clip!important;
@@ -204,7 +204,7 @@
 .city-v4 .node-label small{
   display:block!important;
   color:var(--node)!important;
-  font-size:clamp(.8rem,.88vw,.92rem)!important;
+  font-size:clamp(.64rem,.7vw,.74rem)!important;
   font-weight:950;
   text-shadow:0 1px 0 #fff,0 0 5px #fff;
   white-space:nowrap;
@@ -233,6 +233,7 @@
   font-weight:950;
   box-shadow:0 3px 8px rgba(13,56,43,.2);
 }
+.city-v4 .station-node[data-topic="acid"] .node-label{top:calc(100% - 2px)}
 .city-v4 .status-dot{display:none!important}
 .city-v4 .map-runner{left:50%;top:52%;width:clamp(52px,5.2vw,76px);height:clamp(76px,8vw,112px)}
 .city-v4 .travel-toast{bottom:2.5%;font-size:.78rem}
@@ -264,6 +265,7 @@
  }
  .city-v4 .station-node[data-topic="acid"]{grid-column:1/-1;width:calc(50% - 6px)!important;justify-self:center}
  .city-v4 .node-building{height:104px!important}
+ .city-v4 .node-label{position:relative!important;left:auto;top:auto;bottom:auto;transform:none;justify-self:start;align-self:center;text-align:left}
  .city-v4 .node-label b{font-size:.83rem!important}.city-v4 .node-label small{font-size:.72rem!important}.city-v4 .node-label em{font-size:.64rem}
  .city-v4 .map-runner{display:none}.city-v4 .travel-toast{position:fixed;bottom:78px}
 }

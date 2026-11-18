@@ -2,6 +2,15 @@
 
 Học liệu tĩnh về **Dẫn xuất hydrocarbon Hóa học 11**, chạy trực tiếp trên GitHub Pages, không cần cơ sở dữ liệu hoặc khóa API. Dữ liệu học tập được lưu trong `localStorage` của trình duyệt.
 
+Phiên bản phát hành hiện tại: **V5**. Khi chuyển dự án sang tài khoản khác, đọc `HUONG_DAN_TIEP_TUC.md` trước khi chỉnh sửa.
+
+## Nguồn nội dung
+
+- Tệp Word gốc do tác giả cung cấp được lưu tại `sources/Dan_xuat_hydrocarbon_lop_11.docx` để đối chiếu câu hỏi và lý thuyết.
+- `assets/data/questions.json` lưu ngân hàng câu hỏi đã số hóa, giữ trường `sourceQuestionNumber` để truy ngược số câu trong tài liệu nguồn.
+- `assets/data/theory.json` lưu phần kiến thức cốt lõi, phản ứng, hiện tượng, kết luận, lỗi dễ nhầm và lưu ý an toàn đã chuẩn hóa từ tài liệu nguồn.
+- Các câu có hình công thức cấu tạo dùng ảnh trích xuất trong `assets/reference/`; không tự suy đoán lại cấu trúc bị thiếu trong văn bản thuần.
+
 ## Điểm mới của phiên bản Thành phố Hóa chất
 
 - Màn nhập tên xuất hiện ở lần mở đầu; không gán sẵn tên người chơi. Trình duyệt ghi nhớ riêng từng hồ sơ và tiến độ trên chính thiết bị đó.
@@ -81,4 +90,5 @@ assets/
     stations/
     labs/
 tests/verify.py
+sources/Dan_xuat_hydrocarbon_lop_11.docx
 ```

@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "contentVersion": "2026.11.18",
   "reviewStatus": "chemistry-reviewed",
+  "sourceDocument": "sources/Dan_xuat_hydrocarbon_lop_11.docx",
   "modules": {
     "halogen": {
       "id": "halogen",

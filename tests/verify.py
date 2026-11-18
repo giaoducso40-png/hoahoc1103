@@ -61,6 +61,9 @@ def check_required_files() -> None:
         "assets/css/labs-v4.css",
         "assets/css/content-v4.css",
         "assets/js/app.js",
+        "sources/Dan_xuat_hydrocarbon_lop_11.docx",
+        "HUONG_DAN_TIEP_TUC.md",
+        "CHANGELOG_V5.md",
     ]
     for relative in required:
         if not (ROOT / relative).is_file():

@@ -2,8 +2,8 @@ export default{
  id:"cuo",
  name:"Alcohol và CuO",
  topic:"alcohol",
- warning:"Dây đồng nóng và ethanol dễ cháy. Phải đưa dây ra khỏi ngọn lửa trước khi hạ vào mẫu; không ngửi trực tiếp ethanal.",
- objective:"Quan sát đúng sự biến đổi trên bề mặt dây đồng: Cu đỏ chuyển thành CuO đen, rồi CuO bị ethanol khử để lộ lại Cu đỏ.",
+ warning:"Dây đồng nóng và ethanol dễ cháy. Dùng đèn cồn, đậy nắp để tắt lửa rồi mới đưa dây sang ống nghiệm; không ngửi trực tiếp ethanal.",
+ objective:"Quan sát sự biến đổi ngay trên bề mặt dây đồng: Cu đỏ tạo CuO đen khi nung trong không khí; CuO nóng bị ethanol khử, để lộ lại Cu đỏ.",
  liquid:"#eef1e9",
  prediction:[
   "Lớp CuO đen giảm dần và đồng đỏ xuất hiện trở lại",
@@ -11,17 +11,17 @@ export default{
  ],
  steps:[
   {
-   title:"Nung dây đồng sạch trong không khí",
-   text:"Đưa phần giữa của dây đồng vào ngọn lửa. Giữ cố định để oxygen trong không khí oxi hóa đều bề mặt dây.",
+   title:"Nung dây đồng sạch trên đèn cồn",
+   text:"Đưa đoạn dây đồng cần khảo sát vào vùng nóng của ngọn lửa đèn cồn. Giữ cố định để oxygen trong không khí oxi hóa bề mặt dây.",
    action:"Nung dây đồng",
    observation:"Màu đỏ đồng tối dần rồi chuyển thành lớp CuO màu đen chỉ trên bề mặt dây; dụng cụ và chất lỏng không đổi màu.",
    visual:"black-cuo"
   },
   {
    title:"Đưa dây ra khỏi ngọn lửa và hạ vào ethanol",
-   text:"Tắt gia nhiệt, di chuyển dây CuO còn nóng sang ống nghiệm và hạ phần phủ đen vào mẫu ethanol.",
+   text:"Đậy nắp đèn cồn để tắt lửa, sau đó chuyển ngay dây CuO còn nóng sang ống nghiệm và hạ phần phủ đen vào ethanol.",
    action:"Hạ dây vào ethanol",
-   observation:"Dây rời khỏi vùng lửa rồi hạ xuống mẫu. Chỉ phần CuO tiếp xúc ethanol bắt đầu phản ứng; không có khối đen che dụng cụ.",
+   observation:"Ngọn lửa đã tắt; phần dây phủ CuO được hạ vào ethanol. Chỉ lớp CuO trên dây phản ứng, không có chất đen lan vào dung dịch.",
    visual:"immersed-cuo"
   },
   {
@@ -33,7 +33,7 @@ export default{
   },
   {
    title:"Đối chiếu hiện tượng và chốt kết luận",
-   text:"Dấu hiệu trực quan phải nằm trên dây: Cu đỏ tạo CuO đen khi nung, sau đó CuO đen trở lại Cu đỏ khi oxi hóa ethanol.",
+   text:"Dấu hiệu trực quan phải nằm trên dây: Cu đỏ tạo CuO đen khi nung; sau đó CuO đen bị ethanol khử thành Cu đỏ, đồng thời ethanol bị oxi hóa thành ethanal.",
    action:"Hoàn tất lab",
    observation:"Dây đồng trở lại màu đỏ ở vùng đã phản ứng; mẫu không bị nhuộm đen và không xuất hiện bọt khí vô căn cứ.",
    visual:"cuo-concluded"

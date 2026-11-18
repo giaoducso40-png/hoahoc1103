@@ -21,14 +21,14 @@ export default{
    title:"Gia nhiệt bằng bể cách thủy",
    text:"Đặt hai ống vào bể nước ấm. Nhiệt hỗ trợ cả hai phản ứng; nhánh ethanol tuyệt đối không tiếp xúc ngọn lửa.",
    action:"Bật bể cách thủy",
-   observation:"Nhiệt độ tăng dần. Nhánh A chuyển hóa theo hướng thế; nhánh B bắt đầu tạo khí propene và dẫn khí sang bộ phận thu. Không có bọt xuất hiện vô cớ quanh dụng cụ.",
+   observation:"Nước trong bể ấm lên đồng đều. Nhánh A chuyển hóa theo hướng thế; ở nhánh B, propene sinh ra thoát qua ống dẫn khí riêng. Không dùng ngọn lửa trực tiếp với hệ có ethanol.",
    visual:"branches-heated"
   },
   {
    title:"Mở thẻ sản phẩm",
    text:"Đối chiếu sản phẩm của từng nhánh sau khi gia nhiệt, không trộn kết quả của hai môi trường.",
    action:"Đối chiếu A và B",
-   observation:"Nhánh A tạo propan-1-ol. Nhánh B tách HCl, tạo propene; khí được thể hiện trên đường dẫn riêng.",
+   observation:"Nhánh A tạo propan-1-ol. Nhánh B xảy ra phản ứng tách HCl dưới tác dụng của KOH trong ethanol, tạo propene; khí được thể hiện đúng trên ống dẫn riêng.",
    visual:"branch-products"
   },
   {
