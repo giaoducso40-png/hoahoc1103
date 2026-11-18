@@ -2,7 +2,7 @@
 
 Học liệu tĩnh về **Dẫn xuất hydrocarbon Hóa học 11**, chạy trực tiếp trên GitHub Pages, không cần cơ sở dữ liệu hoặc khóa API. Dữ liệu học tập được lưu trong `localStorage` của trình duyệt.
 
-Phiên bản phát hành hiện tại: **V5**. Khi chuyển dự án sang tài khoản khác, đọc `HUONG_DAN_TIEP_TUC.md` trước khi chỉnh sửa.
+Phiên bản phát hành hiện tại: **V6**. Khi chuyển dự án sang tài khoản khác, đọc `HUONG_DAN_TIEP_TUC.md` trước khi chỉnh sửa.
 
 ## Nguồn nội dung
 

@@ -199,3 +199,66 @@
 .scene-esterification.phase-ester-two-layers .receiver-tube{opacity:1;transform:translate(-205px,-10px) scale(1.16);transform-origin:586px 235px}
 .scene-esterification.phase-ester-two-layers .receiver-organic,.scene-esterification.phase-ester-two-layers .receiver-interface,.scene-esterification.phase-ester-two-layers .receiver-top-name,.scene-esterification.phase-ester-two-layers .receiver-bottom-name,.scene-esterification.phase-ester-two-layers .receiver-top-leader,.scene-esterification.phase-ester-two-layers .receiver-bottom-leader{opacity:1}
 .scene-esterification.phase-ester-two-layers .receiver-title{transform:translate(-60px,-12px)}
+
+/* V6: vùng quan sát lớn, tương phản rõ và có nhãn chỉ điểm cho học sinh. */
+.scene-focus{
+ position:absolute;z-index:24;right:12px;top:12px;display:grid;gap:2px;
+ max-width:min(46%,270px);padding:8px 11px;border:1px solid rgba(19,96,79,.18);
+ border-left:5px solid #168a75;border-radius:12px;background:rgba(255,255,255,.95);
+ box-shadow:0 9px 22px rgba(20,68,58,.14);color:#294d45;text-align:left;pointer-events:none
+}
+.scene-focus b{font-size:clamp(.7rem,1vw,.86rem);line-height:1.2;color:#0d6e5a}
+.scene-focus span{font-size:clamp(.62rem,.85vw,.75rem);font-weight:700;line-height:1.3}
+.mq-diagram{inset:5% 2% 12%;width:96%;height:83%}
+.mq-diagram text{font-size:16px;paint-order:stroke;stroke:rgba(255,255,255,.96);stroke-width:4px;stroke-linejoin:round}
+.mq-diagram .tag{font-size:15px}.mq-diagram .chemical-label{font-size:17px}
+
+.scene-substitution.phase-branches-heated .gas-line,
+.scene-substitution.phase-branch-products .gas-line{stroke:#188b78;stroke-width:7;opacity:1;filter:drop-shadow(0 0 4px rgba(24,139,120,.35))}
+.scene-substitution.phase-branches-heated .gas-bubbles circle,
+.scene-substitution.phase-branch-products .gas-bubbles circle{fill:#dffff7;stroke:#087965;stroke-width:3}
+.scene-substitution.phase-branch-products .product{fill:#174c40;font-size:17px;stroke-width:14px}
+
+.scene-cuo.phase-black-cuo .wire-heating,
+.scene-cuo.phase-immersed-cuo .wire-immersed,
+.scene-cuo.phase-copper-restored .wire-immersed,
+.scene-cuo.phase-cuo-concluded .wire-immersed{filter:drop-shadow(0 0 7px rgba(232,125,62,.38))}
+.scene-cuo .wire-heating .wire-black,.scene-cuo .wire-black-loop,.scene-cuo .immersed-black{stroke-width:16}
+.scene-cuo .wire-heating .wire-copper,.scene-cuo .wire-copper-loop,.scene-cuo .immersed-copper{stroke-width:15}
+
+.scene-phenol-bromine.phase-bromine-drops .contact-cloud{fill:rgba(208,123,30,.44);filter:drop-shadow(0 0 8px rgba(208,123,30,.35))}
+.scene-phenol-bromine.phase-precipitate-growing .precipitate,
+.scene-phenol-bromine.phase-precipitate-settled .precipitate{filter:drop-shadow(0 4px 4px rgba(79,96,89,.28))}
+.scene-phenol-bromine .precipitate path{stroke:#9ea9a4;stroke-width:2}
+
+.scene-tollens .silver-wall,.scene-tollens .silver-bottom{stroke:#96a9b1;stroke-width:12;filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 3px rgba(70,92,101,.45))}
+.scene-tollens.phase-silver-complete .silver-wall,.scene-tollens.phase-silver-complete .silver-bottom{stroke:#839ba5}
+
+.scene-carbonate.phase-powder-contact .contact-foam,
+.scene-carbonate.phase-co2-strong .contact-foam{filter:drop-shadow(0 0 7px rgba(45,157,140,.55))}
+.scene-carbonate .contact-foam circle,.scene-carbonate .co2-bubbles circle{fill:#ecfffb;stroke:#248f7d;stroke-width:3}
+.scene-carbonate.phase-co2-strong .co2-text{fill:#087965;font-size:18px}
+
+/* Ở bước cuối lab ester chỉ giữ ống nhận, phóng lớn ranh giới hai pha và bỏ nền dụng cụ gây nhiễu. */
+.scene-esterification.phase-ester-two-layers .ester-stand,
+.scene-esterification.phase-ester-two-layers .ester-clamp,
+.scene-esterification.phase-ester-two-layers .ester-bath,
+.scene-esterification.phase-ester-two-layers .trivet,
+.scene-esterification.phase-ester-two-layers .ester-tube,
+.scene-esterification.phase-ester-two-layers .ester-alcohol-lamp,
+.scene-esterification.phase-ester-two-layers .heat-waves{opacity:0}
+.scene-esterification.phase-ester-two-layers .receiver-tube{transform:translate(-225px,-20px) scale(1.38);filter:drop-shadow(0 9px 8px rgba(34,80,70,.2))}
+.scene-esterification.phase-ester-two-layers .receiver-interface{stroke:#2c766b;stroke-width:4}
+.scene-esterification.phase-ester-two-layers .receiver-organic{fill:#f4dfa0}
+.scene-esterification.phase-ester-two-layers .receiver-brine{fill:#b8dfe0}
+.scene-esterification.phase-ester-two-layers .receiver-top-name,
+.scene-esterification.phase-ester-two-layers .receiver-bottom-name{font-size:16px;fill:#174c40}
+.scene-esterification.phase-ester-brine-transfer .pour-stream{stroke:#63a99b;stroke-width:9;filter:drop-shadow(0 0 4px rgba(99,169,155,.35))}
+
+@media(max-width:520px){
+ .scene-focus{left:8px;right:8px;top:8px;max-width:none;padding:6px 9px;border-left-width:4px}
+ .scene-focus b{font-size:.7rem}.scene-focus span{font-size:.61rem}
+ .mq-diagram{inset:15% 0 13%;width:100%;height:72%}
+ .mq-diagram text{font-size:14px}.mq-diagram .tag{font-size:13px}.mq-diagram .chemical-label{font-size:15px}
+ .scene-esterification.phase-ester-two-layers .receiver-tube{transform:translate(-225px,-8px) scale(1.28)}
+}
