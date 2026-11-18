@@ -1,0 +1,91 @@
+/* MolQuest V6 — sáu sơ đồ thí nghiệm 2D sạch, cùng ngôn ngữ với mẫu tham khảo. */
+.lab-stage{background:linear-gradient(rgba(248,252,250,.76),rgba(232,247,240,.82)),linear-gradient(#dcebe5 1px,transparent 1px),linear-gradient(90deg,#dcebe5 1px,transparent 1px);background-size:auto,36px 36px,36px 36px}
+.lab-scene{position:relative;display:grid;place-items:center;overflow:hidden}
+.mq-diagram{position:absolute;inset:3% 3% 10%;width:94%;height:87%;overflow:visible}
+.mq-diagram text{fill:#355c53;font:800 14px/1 Arial,sans-serif;text-anchor:middle}
+.mq-diagram .chemical-label{font-size:15px;fill:#174c40}
+.mq-diagram .tag{font-size:13px;fill:#214f44}
+.mq-diagram path,.mq-diagram rect,.mq-diagram ellipse,.mq-diagram circle{vector-effect:non-scaling-stroke}
+.mq-diagram .glass{fill:rgba(255,255,255,.34);stroke:#8fa9a5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.mq-diagram .water{fill:rgba(128,205,205,.3);stroke:#75aaa6;stroke-width:2}
+.mq-diagram .liquid,.mq-diagram .sample-liquid{fill:rgba(174,220,214,.68);stroke:none}
+.mq-diagram .stand,.mq-diagram .rack path,.mq-diagram .rack circle,.mq-diagram .spoon-svg>path,.mq-diagram .spoon-svg>ellipse{fill:none;stroke:#8b83ae;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.mq-diagram .clamp{fill:#aaa2c8;stroke:#78709c;stroke-width:3}
+.scene-caption{z-index:20}
+
+/* Lab 1: chỉ nhánh B có khí propene; sản phẩm chỉ hiện sau khi đối chiếu. */
+.scene-substitution .liquid-a{fill:#9ddbd0}.scene-substitution .liquid-b{fill:#ead58c}
+.scene-substitution .product{opacity:0;fill:#fff;font-size:14px;paint-order:stroke;stroke:#fff;stroke-width:12px;transition:opacity .35s ease}
+.scene-substitution .gas-line{fill:none;stroke:#8fa9a5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;opacity:.65}
+.scene-substitution .gas-bubbles{opacity:0;transition:opacity .35s ease}.scene-substitution .gas-bubbles circle{fill:#fff;stroke:#469986;stroke-width:2}
+.scene-substitution.phase-branches-heated .gas-bubbles,.scene-substitution.phase-branch-products .gas-bubbles{opacity:1}
+.scene-substitution.phase-branches-heated .gas-bubbles circle,.scene-substitution.phase-branch-products .gas-bubbles circle{animation:svgGas 1.5s linear infinite}
+.scene-substitution.phase-branches-heated .gas-bubbles circle:nth-child(2){animation-delay:.35s}.scene-substitution.phase-branches-heated .gas-bubbles circle:nth-child(3){animation-delay:.7s}
+.scene-substitution.phase-branch-products .product{opacity:1}
+
+/* Lab 2: màu đen chỉ phủ lên đoạn dây, không che dụng cụ. */
+.scene-cuo .burner path:not(.flame-svg),.scene-cuo .burner ellipse{fill:#dad7e8;stroke:#8580a4;stroke-width:4}
+.scene-cuo .flame-svg{fill:#ffae5f;stroke:#f27945;stroke-width:3;opacity:0;transform-origin:420px 259px}
+.scene-cuo .wire-copper{fill:none;stroke:#b75735;stroke-width:12;stroke-linecap:round;transition:opacity .6s ease}
+.scene-cuo .wire-black{fill:none;stroke:#252a29;stroke-width:13;stroke-linecap:round;stroke-dasharray:190;stroke-dashoffset:190;opacity:0;transition:stroke-dashoffset 1s ease,opacity .4s ease}
+.scene-cuo .wire-tip{fill:#b75735;stroke:#8f3d28;stroke-width:3}.scene-cuo .wire-note{font-size:13px}.scene-cuo .result-note{opacity:0;transition:opacity .35s ease}
+.scene-cuo.phase-black-cuo .flame-svg{opacity:1;animation:svgFlame .7s ease-in-out infinite alternate}
+.scene-cuo.phase-black-cuo .wire-black{opacity:1;stroke-dashoffset:0}
+.scene-cuo.phase-immersed-cuo .copper-wire,.scene-cuo.phase-copper-restored .copper-wire,.scene-cuo.phase-cuo-concluded .copper-wire{transform:translate(-55px,96px) rotate(-18deg);transform-origin:366px 128px;transition:transform .75s ease}
+.scene-cuo.phase-immersed-cuo .wire-black{opacity:1;stroke-dashoffset:0}
+.scene-cuo.phase-copper-restored .wire-black{opacity:.08;stroke-dashoffset:150;transition:stroke-dashoffset 1.2s ease,opacity 1.2s ease}
+.scene-cuo.phase-cuo-concluded .wire-black{opacity:0;stroke-dashoffset:190;transition:stroke-dashoffset 1.2s ease,opacity 1.2s ease}
+.scene-cuo.phase-copper-restored .result-note,.scene-cuo.phase-cuo-concluded .result-note{opacity:1}
+
+/* Lab 3: bromine nhạt dần và kết tủa trắng tăng dần trong ống. */
+.scene-phenol-bromine .rack{fill:none}.scene-phenol-bromine .phenol-liquid{fill:rgba(241,246,239,.7);transition:fill .8s ease}
+.scene-phenol-bromine .dropper path{fill:#d6b18d;stroke:#9c795e;stroke-width:4}.scene-phenol-bromine .dropper path:nth-child(2){fill:none}
+.scene-phenol-bromine .bromine-drop{fill:#b76b28!important;stroke:#8c4a14!important;opacity:0;transform-origin:464px 220px}
+.scene-phenol-bromine .precipitate{opacity:0;transform-origin:280px 330px;transform:scale(.35);transition:opacity .7s ease,transform 1s ease}.scene-phenol-bromine .precipitate path{fill:#fff;stroke:#cfd8d2;stroke-width:1.5;filter:drop-shadow(0 1px 1px rgba(74,97,88,.18))}
+.scene-phenol-bromine.phase-bromine-drops .phenol-liquid{fill:rgba(214,139,58,.5);animation:svgBromineFade 1.8s .45s ease-out both}.scene-phenol-bromine.phase-bromine-drops .bromine-drop{opacity:1;animation:svgDrop 1.2s ease-in 3}
+.scene-phenol-bromine.phase-precipitate-growing .phenol-liquid{fill:rgba(241,237,207,.6)}.scene-phenol-bromine.phase-precipitate-growing .precipitate{opacity:.8;transform:scale(.8);animation:svgSettle 1.7s ease-in-out infinite alternate}
+.scene-phenol-bromine.phase-precipitate-settled .phenol-liquid{fill:rgba(248,248,235,.72)}.scene-phenol-bromine.phase-precipitate-settled .precipitate{opacity:1;transform:scale(1)}
+
+/* Lab 4: mẫu A tạo mầm bạc rồi lớp gương; mẫu B giữ trong. */
+.scene-tollens .silver-coat{fill:none;stroke:#b9c4c8;stroke-width:13;stroke-linecap:round;stroke-dasharray:510;stroke-dashoffset:510;opacity:0;filter:drop-shadow(0 0 4px #fff);transition:stroke-dashoffset 1.4s ease,opacity .5s ease}
+.scene-tollens .silver-seeds{opacity:0}.scene-tollens .silver-seeds circle{fill:#dce4e6;stroke:#9ba9ad;stroke-width:2}
+.scene-tollens.phase-silver-growing .silver-seeds{opacity:1}.scene-tollens.phase-silver-growing .silver-seeds circle{animation:svgSilverSeed 1.2s ease-in-out infinite alternate}
+.scene-tollens.phase-silver-growing .silver-coat{opacity:.58;stroke-dashoffset:180}
+.scene-tollens.phase-silver-complete .silver-seeds{opacity:.65}.scene-tollens.phase-silver-complete .silver-coat{opacity:1;stroke-dashoffset:0}
+
+/* Lab 5: thìa nghiêng; hạt rơi; bọt chỉ hình thành trong bình và giảm dần. */
+.scene-carbonate .acid-liquid-svg{fill:rgba(185,226,226,.62);stroke:none}.scene-carbonate .spoon-svg{transform-origin:188px 138px;transition:transform .65s ease}
+.scene-carbonate .spoon-svg>ellipse{fill:#e4e4eb}.scene-carbonate .powder circle,.scene-carbonate .falling-powder circle{fill:#f9f8ee;stroke:#c9c9bd;stroke-width:2}.scene-carbonate .falling-powder{opacity:0}
+.scene-carbonate .co2-bubbles,.scene-carbonate .co2-text{opacity:0}.scene-carbonate .co2-bubbles circle{fill:rgba(255,255,255,.7);stroke:#5eaaa0;stroke-width:2}
+.scene-carbonate.phase-powder-contact .spoon-svg,.scene-carbonate.phase-co2-strong .spoon-svg,.scene-carbonate.phase-co2-fading .spoon-svg{transform:translate(125px,34px) rotate(24deg)}
+.scene-carbonate.phase-powder-contact .falling-powder{opacity:1;animation:svgPowder 1s ease both}.scene-carbonate.phase-powder-contact .co2-bubbles{opacity:.45}
+.scene-carbonate.phase-co2-strong .co2-bubbles,.scene-carbonate.phase-co2-strong .co2-text{opacity:1}.scene-carbonate.phase-co2-strong .co2-bubbles circle{animation:svgBubble 1.15s linear infinite}
+.scene-carbonate.phase-co2-fading .co2-bubbles,.scene-carbonate.phase-co2-fading .co2-text{opacity:.35}.scene-carbonate.phase-co2-fading .co2-bubbles circle:nth-child(n+4){display:none}.scene-carbonate.phase-co2-fading .co2-bubbles circle{animation:svgBubble 2.2s linear infinite}
+
+/* Lab 6: trộn, cách thủy, thêm nước muối, sau đó mới tách hai lớp. */
+.scene-esterification .ester-mixture{fill:rgba(222,237,228,.78)}.scene-esterification .ester-top-svg{fill:#efd98a;opacity:0;transition:opacity .8s ease}.scene-esterification .brine-bottom-svg{fill:#b9dedd;opacity:0;transition:opacity .8s ease}
+.scene-esterification .reagent-streams,.scene-esterification .heat-waves,.scene-esterification .layer-name{opacity:0}.scene-esterification .reagent-streams path{fill:none;stroke:#73a99d;stroke-width:5}.scene-esterification .reagent-streams circle{fill:#a6d0c6;stroke:#73a99d;stroke-width:2}
+.scene-esterification .heat-waves path{fill:none;stroke:#ef9e56;stroke-width:4;stroke-linecap:round}
+.scene-esterification.phase-ester-mixing .reagent-streams{opacity:1;animation:svgDrop .9s ease-in infinite}.scene-esterification.phase-ester-mixing .ester-mixture{animation:svgMix 1s ease-in-out infinite alternate}
+.scene-esterification.phase-ester-water-bath .heat-waves{opacity:1;animation:svgHeat 1.1s ease-in-out infinite alternate}
+.scene-esterification.phase-ester-brine-transfer .ester-bath,.scene-esterification.phase-ester-two-layers .ester-bath{opacity:.08;transition:opacity .45s ease}
+.scene-esterification.phase-ester-brine-transfer .ester-tube,.scene-esterification.phase-ester-two-layers .ester-tube{transform:translate(88px,-8px) scale(1.08);transform-origin:342px 230px;transition:transform .55s ease}
+.scene-esterification.phase-ester-brine-transfer .chemical-label,.scene-esterification.phase-ester-two-layers .chemical-label{opacity:0}
+.scene-esterification.phase-ester-brine-transfer .ester-top-svg,.scene-esterification.phase-ester-brine-transfer .brine-bottom-svg{opacity:.45;filter:blur(2px)}
+.scene-esterification.phase-ester-two-layers .ester-mixture{opacity:0}.scene-esterification.phase-ester-two-layers .ester-top-svg,.scene-esterification.phase-ester-two-layers .brine-bottom-svg,.scene-esterification.phase-ester-two-layers .layer-name{opacity:1}
+
+@keyframes svgGas{0%{transform:translate(0,15px);opacity:0}25%{opacity:1}100%{transform:translate(0,-25px);opacity:0}}
+@keyframes svgFlame{to{transform:scale(.88,1.08)}}
+@keyframes svgDrop{0%{transform:translateY(-15px);opacity:0}25%{opacity:1}100%{transform:translateY(45px);opacity:0}}
+@keyframes svgBromineFade{to{fill:rgba(241,237,207,.6)}}
+@keyframes svgSettle{to{transform:translateY(8px) scale(.86)}}
+@keyframes svgSilverSeed{to{transform:scale(1.35);filter:brightness(1.2)}}
+@keyframes svgPowder{from{transform:translateY(-18px);opacity:0}to{transform:translateY(25px);opacity:.15}}
+@keyframes svgBubble{0%{transform:translateY(18px) scale(.65);opacity:0}25%{opacity:1}100%{transform:translateY(-34px) scale(1.15);opacity:0}}
+@keyframes svgMix{to{transform:rotate(1.5deg);transform-origin:342px 310px}}
+@keyframes svgHeat{to{transform:translateY(-7px);opacity:.55}}
+
+@media(min-width:1051px) and (min-height:821px){.lab-workspace{height:clamp(410px,calc(100dvh - 468px),500px)!important;min-height:410px!important}}
+@media(max-height:820px) and (min-width:1051px){.mq-diagram{inset:1% 3% 9%;height:90%}.lab-page-title{margin-bottom:4px}.lab-list{min-height:44px}.lab-head{padding-block:7px}.lab-workspace{min-height:390px!important;height:calc(100dvh - 290px)!important}}
+@media(max-width:1050px){.mq-diagram{inset:2% 2% 11%;width:96%;height:87%}}
+@media(prefers-reduced-motion:reduce){.mq-diagram *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
